@@ -1,0 +1,52 @@
+<div class="toolbar">
+   
+<div><p-sidebar [(visible)]="display">
+    <button pButton type="button" (click)="display = false"  icon="pi pi-arrow-left"></button>
+    
+  <div class="section"><h3>Global</h3></div>
+  <div class="section"><h3>India</h3></div>
+
+  <div class="section"><h3>Technology</h3></div>
+  <div class="section"><h3>Sports</h3></div>
+  <div class="section"><h3>Bollywood</h3></div>
+</p-sidebar>
+
+</div>
+
+<div>
+<button pButton type="button" (click)="display = true" icon="pi pi-arrow-right"></button></div>
+<div class="ui-g-12 ui-md-3">
+    <input type="text" pInputText pTooltip="Enter your username"  tooltipPosition="top" placeholder="Bottom" style="float:right">
+</div>
+</div>
+<br>
+ <div class="category">
+      
+  <div class="ui-g-4 ui-card size">
+    <div *ngFor="let item of news">
+      <p-card>
+        <p-header>
+          <h3>{{ item.Title }}</h3>
+        </p-header>
+        <img [src]="item.urlToImage" />
+        <br />
+        <p>{{ item.Content }}</p>
+        <br />
+         <button
+          pButton
+          type="button"
+          label="Read More"
+          (click)="readMore(item.url)"
+          class="ui-button-raised ui-button-rounded buttonclass"
+        ></button>
+        
+
+        <!-- <p-footer>
+          Footer content here
+        </p-footer> -->
+      </p-card>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/3ccbbb76-f686-488a-9770-3d208acc6711/resourceGroups/appsvc_rg_linux_centralus/providers/Microsoft.Web/sites/NewsSense",
+    "appService.deploySubpath": ""
+}
